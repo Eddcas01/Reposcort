@@ -1,0 +1,2764 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/20/2021 10:22:18 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="PGDESARROLLO02"
+  DTS:CreatorName="MICOOPE\pggteo"
+  DTS:DTSID="{434E527F-8826-4BB3-9A96-4F395986A88C}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.150"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="23"
+  DTS:VersionGUID="{A0A9F890-25A5-47BC-BF95-5D26BCCB6308}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.60.81.5.bdkbguadalupana.BDuser1205]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{662A7DEA-8E04-4C8D-9F9C-2A22B3C33B17}"
+      DTS:ObjectName="10.60.81.5.bdkbguadalupana.BDuser1205">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=10.60.81.5;uid=BDuser1205;Dsn=SSIS_10.60.81.5;description=Base de datos de produccion Guadalupana;database=bdkbguadalupana;port=3306;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7Kck6f7df0Cj7ma2o9nL9wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABzNmqkhO9nD2hL33osK/rPAAAAAASAAACgAAAAEAAAAFDmEp0WZmiPsLUcUz8OF3kgAAAA1jTiZ5catziEMLd8wAh+RHCW2uShA6UUfx8McRpkGu8UAAAAQtlysAKUBFcp2uBj3S5pSr7aIBs</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[190.61.25.122.scoring.scoring]"
+      DTS:CreationName="ADO.NET:MySql.Data.MySqlClient.MySqlConnection, MySql.Data, Version=8.0.25.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"
+      DTS:DTSID="{97E8A698-1D35-4A07-83FB-898E8526F1D8}"
+      DTS:ObjectName="190.61.25.122.scoring.scoring">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=190.61.25.122;user id=scoring;port=3306;database=scoring;">
+          <DTS:Password
+            DTS:Name="password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7Kck6f7df0Cj7ma2o9nL9wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADqIkPUmE3uyWH9P1+suv+wAAAAAASAAACgAAAAEAAAAKL62TacjC5wmJdJVAkKUlkgAAAAExbc8EfZhePWv43FGT3kWxAX7EtOg+eW/PoP2oh/h38UAAAAmfG47m5tMd3T/WFuVZOW5wbb9YU</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[190.61.25.122.scoring.scoring1]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{1DE6A75C-16AA-42CF-BF75-8A5FF140B77E}"
+      DTS:ObjectName="190.61.25.122.scoring.scoring1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=190.61.25.122;User ID=scoring;Initial Catalog=scoring;Persist Security Info=True;Application Name=SSIS-Package-{1DE6A75C-16AA-42CF-BF75-8A5FF140B77E}190.61.25.122.scoring.scoring1;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7Kck6f7df0Cj7ma2o9nL9wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAB9UEkX8gMsTiFbqTGuXvCdAAAAAASAAACgAAAAEAAAAIb7g/nhoO2ZJCd1DIkq9m0YAAAAPB0WywjpvnDu/qX4n5ANkXOu2lYbL428FAAAAPqCJeBYIDtdYRhDhvIzRCkYRRcK</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[BD_PRUEBASCORING.scoring]"
+      DTS:CreationName="ADO.NET:System.Data.Odbc.OdbcConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{74A66089-DE9E-4E10-BF2B-CF879BA9626C}"
+      DTS:ObjectName="BD_PRUEBASCORING.scoring">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=scoring;Dsn=BD_PRUEBASCORING;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7Kck6f7df0Cj7ma2o9nL9wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAABqdqKqxaqA7e3/00VrOtxAAAAAASAAACgAAAAEAAAAHWc7/6XppM7cCxMpT2opJIQAAAAfWjI1VTzPokxIIiDNV2lERQAAAA6lPr+mO2qUhzyjh/iipun6om5og</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.bdkbguadalupana.root1]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{79ED8766-F0E6-4A91-B39B-5B9078E52F2B}"
+      DTS:ObjectName="localhost.bdkbguadalupana.root1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=localhost;uid=root;Dsn=BD_PARAINGRESOS;database=bdkbguadalupana;port=3306;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\LIMPIAR GEN_ASOCIADO"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{AAA7CAAE-BBB0-4899-A741-B809F1AC8814}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="LIMPIAR GEN_ASOCIADO"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{662A7DEA-8E04-4C8D-9F9C-2A22B3C33B17}"
+          SQLTask:SqlStatementSource="DELETE FROM gen_asociado" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\LIMPIAR GEN_CREDITO"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{63C1A47E-15CA-4688-B619-2B2A7B70311D}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="LIMPIAR GEN_CREDITO"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{662A7DEA-8E04-4C8D-9F9C-2A22B3C33B17}"
+          SQLTask:SqlStatementSource="DELETE FROM gen_credito;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\LIMPIAR GEN_PETICIONES"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{6fbde506-fa2d-43a6-81ea-6d6d8682297a}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="LIMPIAR GEN_PETICIONES"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{662A7DEA-8E04-4C8D-9F9C-2A22B3C33B17}"
+          SQLTask:SqlStatementSource="DELETE FROM gen_peticiones" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Flujo de datos"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{8F4043D8-6B85-4DE5-A644-166E57164F88}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Flujo de datos"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarea Flujo de datos\Destino de ODBC"
+              componentClassID="Microsoft.SSISODBCDst"
+              contactInfo="Destino de ODBC;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Destino de ODBC"
+              name="Destino de ODBC"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla que debe recuperarse."
+                  expressionType="Notify"
+                  name="TableName">gen_asociado</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas recuperadas por lote."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de filas insertadas en la misma transacción."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determina la asignación del tamaño de los fragmentos de las columnas LOB"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos que se debe esperar para que una instrucción SQL se ejecute antes de volver a la aplicación."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Página de códigos que se usará cuando la información de la página de códigos no esté disponible en el origen de datos."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="Método usado para insertar datos. Los valores posibles son &quot;Batch&quot; o &quot;Row by row&quot;."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Tipo de datos ODBC C para el enlace de datos numéricos."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determina la manera en la que el componente enlazará columnas de tipos de cadena byte o multibyte (es decir, SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). Las opciones son Unicode (SQL_C_WCHAR) y ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Destino de ODBC.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.60.81.5.bdkbguadalupana.BDuser1205]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.60.81.5.bdkbguadalupana.BDuser1205]"
+                  description="Conexión de runtime de ODBC usada para acceder a la base de datos."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ODBC"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[id]"
+                      cachedDataType="i4"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[codgenasociado]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[id]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[first_name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="first_name"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[primer_nombre]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[first_name]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[second_name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="second_name"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[segundo_nombre]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[second_name]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[first_surname]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="first_surname"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[primer_apellido]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[first_surname]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[second_surname]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="second_surname"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[segundo_apellido]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[second_surname]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[document_id]"
+                      cachedDataType="i4"
+                      cachedName="document_id"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[codgendocumento]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[document_id]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[document_number]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="document_number"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[numerodocumento]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[document_number]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[warranty_id]"
+                      cachedDataType="i4"
+                      cachedName="warranty_id"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[codgarantia]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[warranty_id]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[coin_id]"
+                      cachedDataType="i4"
+                      cachedName="coin_id"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_codigo_moneda]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[coin_id]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[credit_amount]"
+                      cachedDataType="numeric"
+                      cachedName="credit_amount"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_premonto]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[credit_amount]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[period_in_months]"
+                      cachedDataType="i4"
+                      cachedName="period_in_months"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_periodomes]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[period_in_months]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[client_code]"
+                      cachedDataType="i4"
+                      cachedName="client_code"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[cifgeneral]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[client_code]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[user_creation]"
+                      cachedDataType="wstr"
+                      cachedLength="75"
+                      cachedName="user_creation"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[usercreacion]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[user_creation]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[date_creation]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="date_creation"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_fecha_creacion]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[date_creation]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[status]"
+                      cachedDataType="i4"
+                      cachedName="status"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[estado]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[status]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[codgenasociado]"
+                      dataType="i4"
+                      name="codgenasociado" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[primer_nombre]"
+                      dataType="wstr"
+                      length="50"
+                      name="primer_nombre" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[segundo_nombre]"
+                      dataType="wstr"
+                      length="50"
+                      name="segundo_nombre" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[primer_apellido]"
+                      dataType="wstr"
+                      length="50"
+                      name="primer_apellido" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[segundo_apellido]"
+                      dataType="wstr"
+                      length="50"
+                      name="segundo_apellido" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[codgendocumento]"
+                      dataType="i4"
+                      name="codgendocumento" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[numerodocumento]"
+                      dataType="wstr"
+                      length="25"
+                      name="numerodocumento" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[codgarantia]"
+                      dataType="i4"
+                      name="codgarantia" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_codigo_moneda]"
+                      dataType="i4"
+                      name="gen_codigo_moneda" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_premonto]"
+                      dataType="numeric"
+                      name="gen_premonto"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_periodomes]"
+                      dataType="i4"
+                      name="gen_periodomes" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[cifgeneral]"
+                      dataType="i4"
+                      name="cifgeneral" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[usercreacion]"
+                      dataType="wstr"
+                      length="75"
+                      name="usercreacion" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_fecha_creacion]"
+                      dataType="dbTimeStamp"
+                      name="gen_fecha_creacion" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[estado]"
+                      dataType="i4"
+                      name="estado" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Destino de ODBC.Outputs[Salida de error de destino de ODBC]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ODBC"
+                  synchronousInputId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Outputs[Salida de error de destino de ODBC].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Destino de ODBC.Outputs[Salida de error de destino de ODBC].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de ODBC.Outputs[Salida de error de destino de ODBC].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Destino de ODBC.Outputs[Salida de error de destino de ODBC].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Multidifusión"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multidifusión;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Distribuye cada fila de entrada a cada una de las filas de una o varias salidas. Por ejemplo, se crea una bifurcación de un flujo de datos para realizar una copia de los datos de modo que se puedan enmascarar algunos valores antes de compartirlos con los asociados externos."
+              name="Multidifusión">
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Multidifusión.Inputs[Entrada de Multidifusión 1]"
+                  name="Entrada de Multidifusión 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Multidifusión.Outputs[Salida de Multidifusión 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Salida de Multidifusión 1"
+                  synchronousInputId="Package\Tarea Flujo de datos\Multidifusión.Inputs[Entrada de Multidifusión 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Multidifusión.Outputs[Salida de multidifusión 1]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Salida de multidifusión 1"
+                  synchronousInputId="Package\Tarea Flujo de datos\Multidifusión.Inputs[Entrada de Multidifusión 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Origen de ADO NET"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="Origen de ADO NET"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT id,first_name,second_name,first_surname,second_surname,document_id,
+document_number,warranty_id,coin_id,credit_amount,period_in_months,client_code,
+user_creation,date_creation,`status`  FROM pre_qualification;</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Origen de ADO NET.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[BD_PRUEBASCORING.scoring]"
+                  connectionManagerRefId="Package.ConnectionManagers[BD_PRUEBASCORING.scoring]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[id]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[first_name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[first_name]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[first_name]"
+                      name="first_name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[second_name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[second_name]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[second_name]"
+                      name="second_name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[first_surname]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[first_surname]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[first_surname]"
+                      name="first_surname"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[second_surname]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[second_surname]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[second_surname]"
+                      name="second_surname"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[document_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[document_id]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[document_id]"
+                      name="document_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[document_number]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[document_number]"
+                      length="25"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[document_number]"
+                      name="document_number"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[warranty_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[warranty_id]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[warranty_id]"
+                      name="warranty_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[coin_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[coin_id]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[coin_id]"
+                      name="coin_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[credit_amount]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[credit_amount]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[credit_amount]"
+                      name="credit_amount"
+                      precision="10"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[period_in_months]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[period_in_months]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[period_in_months]"
+                      name="period_in_months"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[client_code]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[client_code]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[client_code]"
+                      name="client_code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[user_creation]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[user_creation]"
+                      length="75"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[user_creation]"
+                      name="user_creation"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[date_creation]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[date_creation]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[date_creation]"
+                      name="date_creation"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[status]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[status]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[status]"
+                      name="status"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[id]"
+                      dataType="i4"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[first_name]"
+                      dataType="wstr"
+                      length="50"
+                      name="first_name" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[second_name]"
+                      dataType="wstr"
+                      length="50"
+                      name="second_name" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[first_surname]"
+                      dataType="wstr"
+                      length="50"
+                      name="first_surname" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[second_surname]"
+                      dataType="wstr"
+                      length="50"
+                      name="second_surname" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[document_id]"
+                      dataType="i4"
+                      name="document_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[document_number]"
+                      dataType="wstr"
+                      length="25"
+                      name="document_number" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[warranty_id]"
+                      dataType="i4"
+                      name="warranty_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[coin_id]"
+                      dataType="i4"
+                      name="coin_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[credit_amount]"
+                      dataType="numeric"
+                      name="credit_amount"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[period_in_months]"
+                      dataType="i4"
+                      name="period_in_months" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[client_code]"
+                      dataType="i4"
+                      name="client_code" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[user_creation]"
+                      dataType="wstr"
+                      length="75"
+                      name="user_creation" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[date_creation]"
+                      dataType="dbTimeStamp"
+                      name="date_creation" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[status]"
+                      dataType="i4"
+                      name="status" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[id]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[first_name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[first_name]"
+                      name="first_name" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[second_name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[second_name]"
+                      name="second_name" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[first_surname]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[first_surname]"
+                      name="first_surname" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[second_surname]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[second_surname]"
+                      name="second_surname" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[document_id]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[document_id]"
+                      name="document_id" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[document_number]"
+                      dataType="wstr"
+                      length="25"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[document_number]"
+                      name="document_number" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[warranty_id]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[warranty_id]"
+                      name="warranty_id" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[coin_id]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[coin_id]"
+                      name="coin_id" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[credit_amount]"
+                      dataType="numeric"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[credit_amount]"
+                      name="credit_amount"
+                      precision="10"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[period_in_months]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[period_in_months]"
+                      name="period_in_months" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[client_code]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[client_code]"
+                      name="client_code" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[user_creation]"
+                      dataType="wstr"
+                      length="75"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[user_creation]"
+                      name="user_creation" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[date_creation]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[date_creation]"
+                      name="date_creation" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[status]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[status]"
+                      name="status" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de Multidifusión 1]"
+              endId="Package\Tarea Flujo de datos\Destino de ODBC.Inputs[Entrada de destino de ODBC]"
+              name="Salida de Multidifusión 1"
+              startId="Package\Tarea Flujo de datos\Multidifusión.Outputs[Salida de Multidifusión 1]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de ADO NET]"
+              endId="Package\Tarea Flujo de datos\Multidifusión.Inputs[Entrada de Multidifusión 1]"
+              name="Salida de origen de ADO NET"
+              startId="Package\Tarea Flujo de datos\Origen de ADO NET.Outputs[Salida de origen de ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Flujo de datos 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{CE8EB2C9-7983-4431-B115-53AE8249F8ED}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Flujo de datos 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarea Flujo de datos 1\Destino de ODBC"
+              componentClassID="Microsoft.SSISODBCDst"
+              contactInfo="Destino de ODBC;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Destino de ODBC"
+              name="Destino de ODBC"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla que debe recuperarse."
+                  expressionType="Notify"
+                  name="TableName">gen_credito</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas recuperadas por lote."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de filas insertadas en la misma transacción."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determina la asignación del tamaño de los fragmentos de las columnas LOB"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos que se debe esperar para que una instrucción SQL se ejecute antes de volver a la aplicación."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Página de códigos que se usará cuando la información de la página de códigos no esté disponible en el origen de datos."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="Método usado para insertar datos. Los valores posibles son &quot;Batch&quot; o &quot;Row by row&quot;."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Tipo de datos ODBC C para el enlace de datos numéricos."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determina la manera en la que el componente enlazará columnas de tipos de cadena byte o multibyte (es decir, SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). Las opciones son Unicode (SQL_C_WCHAR) y ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.60.81.5.bdkbguadalupana.BDuser1205]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.60.81.5.bdkbguadalupana.BDuser1205]"
+                  description="Conexión de runtime de ODBC usada para acceder a la base de datos."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ODBC"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[id]"
+                      cachedDataType="i4"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[codgencred]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[id]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[pre_qualification_id]"
+                      cachedDataType="i4"
+                      cachedName="pre_qualification_id"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[codgenasociado]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[pre_qualification_id]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[numero_prestamo]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="numero_prestamo"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_numcredito]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[numero_prestamo]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[fecha_prestamo]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="fecha_prestamo"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_fechaprestamo]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fecha_prestamo]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[descripcion_prestamo]"
+                      cachedDataType="wstr"
+                      cachedLength="250"
+                      cachedName="descripcion_prestamo"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[descripcion_prestamo]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[descripcion_prestamo]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[descripcion_moneda]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="descripcion_moneda"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_codigo_moneda]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[descripcion_moneda]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[monto]"
+                      cachedDataType="numeric"
+                      cachedName="monto"
+                      cachedPrecision="11"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_monto]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[monto]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[saldo]"
+                      cachedDataType="numeric"
+                      cachedName="saldo"
+                      cachedPrecision="11"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_saldo]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[saldo]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[mora]"
+                      cachedDataType="numeric"
+                      cachedName="mora"
+                      cachedPrecision="11"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_mora]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[mora]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[cuota]"
+                      cachedDataType="numeric"
+                      cachedName="cuota"
+                      cachedPrecision="11"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_cuota]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[cuota]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[estado]"
+                      cachedDataType="numeric"
+                      cachedName="estado"
+                      cachedPrecision="11"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[estado]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[estado]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[fecha_desembolso]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="fecha_desembolso"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_fechadesembolso]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fecha_desembolso]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[codgencred]"
+                      dataType="i4"
+                      name="codgencred" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[codgenasociado]"
+                      dataType="i4"
+                      name="codgenasociado" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_numcredito]"
+                      dataType="wstr"
+                      length="50"
+                      name="gen_numcredito" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_fechaprestamo]"
+                      dataType="dbTimeStamp"
+                      name="gen_fechaprestamo" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[descripcion_prestamo]"
+                      dataType="wstr"
+                      length="250"
+                      name="descripcion_prestamo" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_codigo_moneda]"
+                      dataType="wstr"
+                      length="250"
+                      name="gen_codigo_moneda" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_monto]"
+                      dataType="numeric"
+                      name="gen_monto"
+                      precision="11"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_saldo]"
+                      dataType="numeric"
+                      name="gen_saldo"
+                      precision="11"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_mora]"
+                      dataType="numeric"
+                      name="gen_mora"
+                      precision="11"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_cuota]"
+                      dataType="numeric"
+                      name="gen_cuota"
+                      precision="11"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[estado]"
+                      dataType="numeric"
+                      name="estado"
+                      precision="11"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_fechadesembolso]"
+                      dataType="dbTimeStamp"
+                      name="gen_fechadesembolso" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Outputs[Salida de error de destino de ODBC]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ODBC"
+                  synchronousInputId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Outputs[Salida de error de destino de ODBC].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 1\Destino de ODBC.Outputs[Salida de error de destino de ODBC].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino de ODBC.Outputs[Salida de error de destino de ODBC].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 1\Destino de ODBC.Outputs[Salida de error de destino de ODBC].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos 1\Multidifusión"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multidifusión;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Distribuye cada fila de entrada a cada una de las filas de una o varias salidas. Por ejemplo, se crea una bifurcación de un flujo de datos para realizar una copia de los datos de modo que se puedan enmascarar algunos valores antes de compartirlos con los asociados externos."
+              name="Multidifusión">
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos 1\Multidifusión.Inputs[Entrada de Multidifusión 1]"
+                  name="Entrada de Multidifusión 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos 1\Multidifusión.Outputs[Salida de Multidifusión 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Salida de Multidifusión 1"
+                  synchronousInputId="Package\Tarea Flujo de datos 1\Multidifusión.Inputs[Entrada de Multidifusión 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos 1\Multidifusión.Outputs[Salida de multidifusión 1]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Salida de multidifusión 1"
+                  synchronousInputId="Package\Tarea Flujo de datos 1\Multidifusión.Inputs[Entrada de Multidifusión 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos 1\Origen de ADO NET"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="Origen de ADO NET"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT id,pre_qualification_id,numero_prestamo,fecha_prestamo,descripcion_prestamo,descripcion_moneda,monto,saldo,mora,cuota,estado,fecha_desembolso
+FROM pre_loans;</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[BD_PRUEBASCORING.scoring]"
+                  connectionManagerRefId="Package.ConnectionManagers[BD_PRUEBASCORING.scoring]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[id]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[pre_qualification_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[pre_qualification_id]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[pre_qualification_id]"
+                      name="pre_qualification_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[numero_prestamo]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[numero_prestamo]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[numero_prestamo]"
+                      name="numero_prestamo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fecha_prestamo]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_prestamo]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fecha_prestamo]"
+                      name="fecha_prestamo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[descripcion_prestamo]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[descripcion_prestamo]"
+                      length="250"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[descripcion_prestamo]"
+                      name="descripcion_prestamo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[descripcion_moneda]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[descripcion_moneda]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[descripcion_moneda]"
+                      name="descripcion_moneda"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[monto]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[monto]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[monto]"
+                      name="monto"
+                      precision="11"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[saldo]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[saldo]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[saldo]"
+                      name="saldo"
+                      precision="11"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[mora]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[mora]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[mora]"
+                      name="mora"
+                      precision="11"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[cuota]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[cuota]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[cuota]"
+                      name="cuota"
+                      precision="11"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[estado]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[estado]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[estado]"
+                      name="estado"
+                      precision="11"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fecha_desembolso]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_desembolso]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fecha_desembolso]"
+                      name="fecha_desembolso"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[id]"
+                      dataType="i4"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[pre_qualification_id]"
+                      dataType="i4"
+                      name="pre_qualification_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[numero_prestamo]"
+                      dataType="wstr"
+                      length="50"
+                      name="numero_prestamo" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_prestamo]"
+                      dataType="dbTimeStamp"
+                      name="fecha_prestamo" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[descripcion_prestamo]"
+                      dataType="wstr"
+                      length="250"
+                      name="descripcion_prestamo" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[descripcion_moneda]"
+                      dataType="wstr"
+                      length="50"
+                      name="descripcion_moneda" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[monto]"
+                      dataType="numeric"
+                      name="monto"
+                      precision="11"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[saldo]"
+                      dataType="numeric"
+                      name="saldo"
+                      precision="11"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[mora]"
+                      dataType="numeric"
+                      name="mora"
+                      precision="11"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[cuota]"
+                      dataType="numeric"
+                      name="cuota"
+                      precision="11"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[estado]"
+                      dataType="numeric"
+                      name="estado"
+                      precision="11"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_desembolso]"
+                      dataType="dbTimeStamp"
+                      name="fecha_desembolso" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[id]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[pre_qualification_id]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[pre_qualification_id]"
+                      name="pre_qualification_id" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[numero_prestamo]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[numero_prestamo]"
+                      name="numero_prestamo" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fecha_prestamo]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fecha_prestamo]"
+                      name="fecha_prestamo" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[descripcion_prestamo]"
+                      dataType="wstr"
+                      length="250"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[descripcion_prestamo]"
+                      name="descripcion_prestamo" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[descripcion_moneda]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[descripcion_moneda]"
+                      name="descripcion_moneda" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[monto]"
+                      dataType="numeric"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[monto]"
+                      name="monto"
+                      precision="11"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[saldo]"
+                      dataType="numeric"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[saldo]"
+                      name="saldo"
+                      precision="11"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[mora]"
+                      dataType="numeric"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[mora]"
+                      name="mora"
+                      precision="11"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[cuota]"
+                      dataType="numeric"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[cuota]"
+                      name="cuota"
+                      precision="11"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[estado]"
+                      dataType="numeric"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[estado]"
+                      name="estado"
+                      precision="11"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fecha_desembolso]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fecha_desembolso]"
+                      name="fecha_desembolso" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarea Flujo de datos 1.Paths[Salida de Multidifusión 1]"
+              endId="Package\Tarea Flujo de datos 1\Destino de ODBC.Inputs[Entrada de destino de ODBC]"
+              name="Salida de Multidifusión 1"
+              startId="Package\Tarea Flujo de datos 1\Multidifusión.Outputs[Salida de Multidifusión 1]" />
+            <path
+              refId="Package\Tarea Flujo de datos 1.Paths[Salida de origen de ADO NET]"
+              endId="Package\Tarea Flujo de datos 1\Multidifusión.Inputs[Entrada de Multidifusión 1]"
+              name="Salida de origen de ADO NET"
+              startId="Package\Tarea Flujo de datos 1\Origen de ADO NET.Outputs[Salida de origen de ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Flujo de datos 2"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{d8c6e2cc-d0a4-42af-b94b-f5d5301392cc}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Flujo de datos 2"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarea Flujo de datos 2\Destino de ODBC"
+              componentClassID="Microsoft.SSISODBCDst"
+              contactInfo="Destino de ODBC;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Destino de ODBC"
+              name="Destino de ODBC"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla que debe recuperarse."
+                  expressionType="Notify"
+                  name="TableName">gen_peticiones</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas recuperadas por lote."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de filas insertadas en la misma transacción."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determina la asignación del tamaño de los fragmentos de las columnas LOB"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos que se debe esperar para que una instrucción SQL se ejecute antes de volver a la aplicación."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Página de códigos que se usará cuando la información de la página de códigos no esté disponible en el origen de datos."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="Método usado para insertar datos. Los valores posibles son &quot;Batch&quot; o &quot;Row by row&quot;."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Tipo de datos ODBC C para el enlace de datos numéricos."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determina la manera en la que el componente enlazará columnas de tipos de cadena byte o multibyte (es decir, SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). Las opciones son Unicode (SQL_C_WCHAR) y ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.60.81.5.bdkbguadalupana.BDuser1205]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.60.81.5.bdkbguadalupana.BDuser1205]"
+                  description="Conexión de runtime de ODBC usada para acceder a la base de datos."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ODBC"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[id]"
+                      cachedDataType="i4"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[codgenpeticiones]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[id]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[id_prequalification]"
+                      cachedDataType="i4"
+                      cachedName="id_prequalification"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesidprecalificacion]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[id_prequalification]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[code_client]"
+                      cachedDataType="i4"
+                      cachedName="code_client"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionescodigocliente]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[code_client]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[primer_nombre]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="primer_nombre"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesprimernombre]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[primer_nombre]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[segundo_nombre]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="segundo_nombre"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionessegundonombre]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[segundo_nombre]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[tercer_nombre]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="tercer_nombre"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionestercernombre]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[tercer_nombre]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[primer_apellido]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="primer_apellido"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesprimerapellido]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[primer_apellido]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[segundo_apellido]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="segundo_apellido"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionessegundoapellido]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[segundo_apellido]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[fecha_creacion]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="fecha_creacion"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesfechacreacion]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fecha_creacion]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[estado]"
+                      cachedDataType="i4"
+                      cachedName="estado"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesestado]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[estado]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[warranty_id]"
+                      cachedDataType="i4"
+                      cachedName="warranty_id"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesgarantia]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[warranty_id]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[credit_amount]"
+                      cachedDataType="numeric"
+                      cachedName="credit_amount"
+                      cachedPrecision="12"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesmontocredito]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[credit_amount]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[credit_number]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="credit_number"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesnumerocredito]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[credit_number]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[income]"
+                      cachedDataType="numeric"
+                      cachedName="income"
+                      cachedPrecision="12"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesincome]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[income]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[date_first]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="date_first"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesprimerafecha]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[date_first]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[approval_date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="approval_date"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesfechadeaprobacion]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[approval_date]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[credit_user]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="credit_user"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesusuariodelcredito]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[credit_user]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].Columns[credit_date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="credit_date"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesfechacredito]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[credit_date]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[codgenpeticiones]"
+                      dataType="i4"
+                      name="codgenpeticiones" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesidprecalificacion]"
+                      dataType="i4"
+                      name="gen_peticionesidprecalificacion" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionescodigocliente]"
+                      dataType="i4"
+                      name="gen_peticionescodigocliente" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesprimernombre]"
+                      dataType="wstr"
+                      length="100"
+                      name="gen_peticionesprimernombre" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionessegundonombre]"
+                      dataType="wstr"
+                      length="100"
+                      name="gen_peticionessegundonombre" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionestercernombre]"
+                      dataType="wstr"
+                      length="100"
+                      name="gen_peticionestercernombre" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesprimerapellido]"
+                      dataType="wstr"
+                      length="100"
+                      name="gen_peticionesprimerapellido" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionessegundoapellido]"
+                      dataType="wstr"
+                      length="100"
+                      name="gen_peticionessegundoapellido" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesfechacreacion]"
+                      dataType="dbTimeStamp"
+                      name="gen_peticionesfechacreacion" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesestado]"
+                      dataType="i4"
+                      name="gen_peticionesestado" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesgarantia]"
+                      dataType="i4"
+                      name="gen_peticionesgarantia" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesmontocredito]"
+                      dataType="numeric"
+                      name="gen_peticionesmontocredito"
+                      precision="12"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesnumerocredito]"
+                      dataType="wstr"
+                      length="20"
+                      name="gen_peticionesnumerocredito" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesincome]"
+                      dataType="numeric"
+                      name="gen_peticionesincome"
+                      precision="12"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesprimerafecha]"
+                      dataType="dbTimeStamp"
+                      name="gen_peticionesprimerafecha" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesfechadeaprobacion]"
+                      dataType="dbTimeStamp"
+                      name="gen_peticionesfechadeaprobacion" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesusuariodelcredito]"
+                      dataType="wstr"
+                      length="50"
+                      name="gen_peticionesusuariodelcredito" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC].ExternalColumns[gen_peticionesfechacredito]"
+                      dataType="dbTimeStamp"
+                      name="gen_peticionesfechacredito" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Outputs[Salida de error de destino de ODBC]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ODBC"
+                  synchronousInputId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Outputs[Salida de error de destino de ODBC].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 2\Destino de ODBC.Outputs[Salida de error de destino de ODBC].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Destino de ODBC.Outputs[Salida de error de destino de ODBC].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 2\Destino de ODBC.Outputs[Salida de error de destino de ODBC].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos 2\Multidifusión"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multidifusión;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Distribuye cada fila de entrada a cada una de las filas de una o varias salidas. Por ejemplo, se crea una bifurcación de un flujo de datos para realizar una copia de los datos de modo que se puedan enmascarar algunos valores antes de compartirlos con los asociados externos."
+              name="Multidifusión">
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos 2\Multidifusión.Inputs[Entrada de Multidifusión 1]"
+                  name="Entrada de Multidifusión 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos 2\Multidifusión.Outputs[Salida de multidifusión 2]"
+                  deleteOutputOnPathDetached="true"
+                  name="Salida de multidifusión 2"
+                  synchronousInputId="Package\Tarea Flujo de datos 2\Multidifusión.Inputs[Entrada de Multidifusión 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos 2\Multidifusión.Outputs[Salida de multidifusión 1]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Salida de multidifusión 1"
+                  synchronousInputId="Package\Tarea Flujo de datos 2\Multidifusión.Inputs[Entrada de Multidifusión 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos 2\Origen de ADO NET"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="Origen de ADO NET"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT id,id_prequalification,code_client,primer_nombre,segundo_nombre,tercer_nombre,primer_apellido,segundo_apellido,fecha_creacion,estado,warranty_id,credit_amount,credit_number,income,date_first,approval_date,credit_user,credit_date from request;</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[BD_PRUEBASCORING.scoring]"
+                  connectionManagerRefId="Package.ConnectionManagers[BD_PRUEBASCORING.scoring]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[id]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[id_prequalification]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[id_prequalification]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[id_prequalification]"
+                      name="id_prequalification"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[code_client]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[code_client]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[code_client]"
+                      name="code_client"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[primer_nombre]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[primer_nombre]"
+                      length="100"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[primer_nombre]"
+                      name="primer_nombre"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[segundo_nombre]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[segundo_nombre]"
+                      length="100"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[segundo_nombre]"
+                      name="segundo_nombre"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[tercer_nombre]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[tercer_nombre]"
+                      length="100"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[tercer_nombre]"
+                      name="tercer_nombre"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[primer_apellido]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[primer_apellido]"
+                      length="100"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[primer_apellido]"
+                      name="primer_apellido"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[segundo_apellido]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[segundo_apellido]"
+                      length="100"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[segundo_apellido]"
+                      name="segundo_apellido"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fecha_creacion]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_creacion]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fecha_creacion]"
+                      name="fecha_creacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[estado]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[estado]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[estado]"
+                      name="estado"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[warranty_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[warranty_id]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[warranty_id]"
+                      name="warranty_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[credit_amount]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[credit_amount]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[credit_amount]"
+                      name="credit_amount"
+                      precision="12"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[credit_number]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[credit_number]"
+                      length="20"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[credit_number]"
+                      name="credit_number"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[income]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[income]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[income]"
+                      name="income"
+                      precision="12"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[date_first]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[date_first]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[date_first]"
+                      name="date_first"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[approval_date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[approval_date]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[approval_date]"
+                      name="approval_date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[credit_user]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[credit_user]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[credit_user]"
+                      name="credit_user"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[credit_date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[credit_date]"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[credit_date]"
+                      name="credit_date"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[id]"
+                      dataType="i4"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[id_prequalification]"
+                      dataType="i4"
+                      name="id_prequalification" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[code_client]"
+                      dataType="i4"
+                      name="code_client" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[primer_nombre]"
+                      dataType="wstr"
+                      length="100"
+                      name="primer_nombre" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[segundo_nombre]"
+                      dataType="wstr"
+                      length="100"
+                      name="segundo_nombre" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[tercer_nombre]"
+                      dataType="wstr"
+                      length="100"
+                      name="tercer_nombre" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[primer_apellido]"
+                      dataType="wstr"
+                      length="100"
+                      name="primer_apellido" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[segundo_apellido]"
+                      dataType="wstr"
+                      length="100"
+                      name="segundo_apellido" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_creacion]"
+                      dataType="dbTimeStamp"
+                      name="fecha_creacion" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[estado]"
+                      dataType="i4"
+                      name="estado" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[warranty_id]"
+                      dataType="i4"
+                      name="warranty_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[credit_amount]"
+                      dataType="numeric"
+                      name="credit_amount"
+                      precision="12"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[credit_number]"
+                      dataType="wstr"
+                      length="20"
+                      name="credit_number" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[income]"
+                      dataType="numeric"
+                      name="income"
+                      precision="12"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[date_first]"
+                      dataType="dbTimeStamp"
+                      name="date_first" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[approval_date]"
+                      dataType="dbTimeStamp"
+                      name="approval_date" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[credit_user]"
+                      dataType="wstr"
+                      length="50"
+                      name="credit_user" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[credit_date]"
+                      dataType="dbTimeStamp"
+                      name="credit_date" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[id]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[id_prequalification]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[id_prequalification]"
+                      name="id_prequalification" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[code_client]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[code_client]"
+                      name="code_client" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[primer_nombre]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[primer_nombre]"
+                      name="primer_nombre" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[segundo_nombre]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[segundo_nombre]"
+                      name="segundo_nombre" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[tercer_nombre]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[tercer_nombre]"
+                      name="tercer_nombre" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[primer_apellido]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[primer_apellido]"
+                      name="primer_apellido" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[segundo_apellido]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[segundo_apellido]"
+                      name="segundo_apellido" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fecha_creacion]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fecha_creacion]"
+                      name="fecha_creacion" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[estado]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[estado]"
+                      name="estado" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[warranty_id]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[warranty_id]"
+                      name="warranty_id" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[credit_amount]"
+                      dataType="numeric"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[credit_amount]"
+                      name="credit_amount"
+                      precision="12"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[credit_number]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[credit_number]"
+                      name="credit_number" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[income]"
+                      dataType="numeric"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[income]"
+                      name="income"
+                      precision="12"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[date_first]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[date_first]"
+                      name="date_first" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[approval_date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[approval_date]"
+                      name="approval_date" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[credit_user]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[credit_user]"
+                      name="credit_user" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[credit_date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[credit_date]"
+                      name="credit_date" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarea Flujo de datos 2.Paths[Salida de multidifusión 2]"
+              endId="Package\Tarea Flujo de datos 2\Destino de ODBC.Inputs[Entrada de destino de ODBC]"
+              name="Salida de multidifusión 2"
+              startId="Package\Tarea Flujo de datos 2\Multidifusión.Outputs[Salida de multidifusión 2]" />
+            <path
+              refId="Package\Tarea Flujo de datos 2.Paths[Salida de origen de ADO NET]"
+              endId="Package\Tarea Flujo de datos 2\Multidifusión.Inputs[Entrada de Multidifusión 1]"
+              name="Salida de origen de ADO NET"
+              startId="Package\Tarea Flujo de datos 2\Origen de ADO NET.Outputs[Salida de origen de ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{23722631-C543-4738-A778-1124FEB02117}"
+      DTS:From="Package\LIMPIAR GEN_ASOCIADO"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Tarea Flujo de datos" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{2FEFD5EC-F211-4441-A817-2C7B3517EB43}"
+      DTS:From="Package\LIMPIAR GEN_CREDITO"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 1"
+      DTS:To="Package\Tarea Flujo de datos 1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{8ECEABC2-B451-4751-805F-6B3CB090C421}"
+      DTS:From="Package\LIMPIAR GEN_PETICIONES"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 2"
+      DTS:To="Package\Tarea Flujo de datos 2" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="206.4,41.6"
+          Id="Package\LIMPIAR GEN_ASOCIADO"
+          TopLeft="46.2499993108213,44.6143288473493" />
+        <NodeLayout
+          Size="202.4,42.4"
+          Id="Package\LIMPIAR GEN_CREDITO"
+          TopLeft="270.069440420096,47.3008784597074" />
+        <NodeLayout
+          Size="208,42.4"
+          Id="Package\LIMPIAR GEN_PETICIONES"
+          TopLeft="478.791664459432,46.5681362407712" />
+        <NodeLayout
+          Size="177.6,42.4"
+          Id="Package\Tarea Flujo de datos"
+          TopLeft="31.249999534339,132.942110294363" />
+        <NodeLayout
+          Size="186.4,42.4"
+          Id="Package\Tarea Flujo de datos 1"
+          TopLeft="218.680552296962,133.051466191839" />
+        <NodeLayout
+          Size="185.6,42.4"
+          Id="Package\Tarea Flujo de datos 2"
+          TopLeft="448.083327093472,135.333331008752" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="149.249999310821,86.6143288473493">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-29.3333331098156,46.3277814470136"
+              Start="0,0"
+              End="-29.3333331098156,38.8277814470136">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.1638907235068" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.1638907235068"
+                    Point2="0,23.1638907235068"
+                    Point3="-4,23.1638907235068" />
+                  <mssgle:LineSegment
+                    End="-25.3333331098156,23.1638907235068" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-25.3333331098156,23.1638907235068"
+                    Point2="-29.3333331098156,23.1638907235068"
+                    Point3="-29.3333331098156,27.1638907235068" />
+                  <mssgle:LineSegment
+                    End="-29.3333331098156,38.8277814470136" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 1]"
+          TopLeft="371.402773753429,89.9675451263741">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-59.3888881231345,43.0839210654648"
+              Start="0,0"
+              End="-59.3888881231345,35.5839210654648">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5419605327324" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.5419605327324"
+                    Point2="0,21.5419605327324"
+                    Point3="-4,21.5419605327324" />
+                  <mssgle:LineSegment
+                    End="-55.3888881231345,21.5419605327324" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-55.3888881231345,21.5419605327324"
+                    Point2="-59.3888881231345,21.5419605327324"
+                    Point3="-59.3888881231345,25.5419605327324" />
+                  <mssgle:LineSegment
+                    End="-59.3888881231345,35.5839210654648" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 2]"
+          TopLeft="582.791664459432,89.2348029074379">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-42.0416706992936,46.0985281013144"
+              Start="0,0"
+              End="-42.0416706992936,38.5985281013144">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.0492640506572" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.0492640506572"
+                    Point2="0,23.0492640506572"
+                    Point3="-4,23.0492640506572" />
+                  <mssgle:LineSegment
+                    End="-38.0416706992936,23.0492640506572" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-38.0416706992936,23.0492640506572"
+                    Point2="-42.0416706992936,23.0492640506572"
+                    Point3="-42.0416706992936,27.0492640506572" />
+                  <mssgle:LineSegment
+                    End="-42.0416706992936,38.5985281013144" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Tarea Flujo de datos">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="176,42.4"
+          Id="Package\Tarea Flujo de datos\Origen de ADO NET"
+          TopLeft="16.2499997578561,15.0526318622758" />
+        <NodeLayout
+          Size="139.2,42.4"
+          Id="Package\Tarea Flujo de datos\Multidifusión"
+          TopLeft="51.2499992363151,89.6315806344606" />
+        <NodeLayout
+          Size="164,42.4"
+          Id="Package\Tarea Flujo de datos\Destino de ODBC"
+          TopLeft="32.4999995157126,166.947371563423" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de ADO NET]"
+          TopLeft="104.249999757856,57.7192985289425">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="16.6666661451257,31.9122821055181"
+              Start="0,0"
+              End="16.6666661451257,24.4122821055181">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.9561410527591" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.9561410527591"
+                    Point2="0,15.9561410527591"
+                    Point3="4,15.9561410527591" />
+                  <mssgle:LineSegment
+                    End="12.6666661451257,15.9561410527591" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12.6666661451257,15.9561410527591"
+                    Point2="16.6666661451257,15.9561410527591"
+                    Point3="16.6666661451257,19.9561410527591" />
+                  <mssgle:LineSegment
+                    End="16.6666661451257,24.4122821055181" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de Multidifusión 1]"
+          TopLeft="117.708332709347,132.298247301127">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.6491242622957"
+              Start="0,0"
+              End="0,27.1491242622957">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.1491242622957" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Origen de ADO NET">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Destino de ODBC">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Tarea Flujo de datos 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="139.2,42.4"
+          Id="Package\Tarea Flujo de datos 1\Multidifusión"
+          TopLeft="178.333333333333,119.333333333333" />
+        <NodeLayout
+          Size="176,42.4"
+          Id="Package\Tarea Flujo de datos 1\Origen de ADO NET"
+          TopLeft="164.923076923077,41" />
+        <NodeLayout
+          Size="164,42.4"
+          Id="Package\Tarea Flujo de datos 1\Destino de ODBC"
+          TopLeft="280.666666666666,187" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos 1.Paths[Salida de origen de ADO NET]"
+          TopLeft="250.461538461539,83.6666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.6666666666667"
+              Start="0,0"
+              End="0,28.1666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.1666666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos 1.Paths[Salida de Multidifusión 1]"
+          TopLeft="248,162">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="114.666666666667,25.0000000000003"
+              Start="0,0"
+              End="114.666666666667,17.5000000000003">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.50000000000016" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.50000000000016"
+                    Point2="0,12.5000000000002"
+                    Point3="4,12.5000000000002" />
+                  <mssgle:LineSegment
+                    End="110.666666666667,12.5000000000002" />
+                  <mssgle:CubicBezierSegment
+                    Point1="110.666666666667,12.5000000000002"
+                    Point2="114.666666666667,12.5000000000002"
+                    Point3="114.666666666667,16.5000000000002" />
+                  <mssgle:LineSegment
+                    End="114.666666666667,17.5000000000003" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos 1\Origen de ADO NET">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos 1\Destino de ODBC">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Tarea Flujo de datos 2">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="139.2,42.4"
+          Id="Package\Tarea Flujo de datos 2\Multidifusión"
+          TopLeft="225.666666666666,62.9090909090906" />
+        <NodeLayout
+          Size="164,42.4"
+          Id="Package\Tarea Flujo de datos 2\Destino de ODBC"
+          TopLeft="432.143938518496,53.7212116098044" />
+        <NodeLayout
+          Size="176,42.4"
+          Id="Package\Tarea Flujo de datos 2\Origen de ADO NET"
+          TopLeft="20.1351981351983,32.5757575757576" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos 2.Paths[Salida de origen de ADO NET]"
+          TopLeft="196.135198135198,53.9090909090909">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="29.5314685314681,30.333333333333"
+              Start="0,0"
+              End="22.0314685314681,30.333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="10.765734265734,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10.765734265734,0"
+                    Point2="14.765734265734,0"
+                    Point3="14.765734265734,4" />
+                  <mssgle:LineSegment
+                    End="14.765734265734,26.333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="14.765734265734,26.333333333333"
+                    Point2="14.765734265734,30.333333333333"
+                    Point3="18.765734265734,30.333333333333" />
+                  <mssgle:LineSegment
+                    End="22.0314685314681,30.333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos 2.Paths[Salida de multidifusión 2]"
+          TopLeft="364.999999999999,84.2424242424239">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="67.1439385184965,-9.18787929928625"
+              Start="0,0"
+              End="59.6439385184965,-9.18787929928625">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="29.5719692592482,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="29.5719692592482,0"
+                    Point2="33.5719692592482,0"
+                    Point3="33.5719692592482,-4" />
+                  <mssgle:LineSegment
+                    End="33.5719692592482,-5.18787929928625" />
+                  <mssgle:CubicBezierSegment
+                    Point1="33.5719692592482,-5.18787929928625"
+                    Point2="33.5719692592482,-9.18787929928625"
+                    Point3="37.5719692592482,-9.18787929928625" />
+                  <mssgle:LineSegment
+                    End="59.6439385184965,-9.18787929928625" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos 2\Destino de ODBC">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos 2\Origen de ADO NET">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
